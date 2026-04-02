@@ -82,7 +82,7 @@ export default function EscrowDetail() {
   const ethAmt = fmtEth(e.amount)
 
   return (
-    <div className="page">
+    <div className="page escrow-detail-page">
       <div style={{ borderBottom:'var(--b1)', padding:'14px 0' }}>
         <div className="wrap" style={{ fontSize:'11px', color:'#888', fontFamily:'var(--font-mono)' }}>
           <Link to="/marketplace" style={{ color:'#aaa' }}>Marketplace</Link>
@@ -91,8 +91,8 @@ export default function EscrowDetail() {
         </div>
       </div>
 
-      <div className="wrap" style={{ paddingTop:36, paddingBottom:60 }}>
-        <div style={{ display:'grid', gridTemplateColumns:'1fr 340px', gap:0 }}>
+      <div className="wrap escrow-detail-layout" style={{ paddingTop:36, paddingBottom:60 }}>
+        <div className="grid two-col-layout" style={{ display:'grid', gridTemplateColumns:'1fr 340px', gap:0 }}>
 
           {/* Main */}
           <div style={{ borderRight:'var(--b1)', paddingRight:40 }}>

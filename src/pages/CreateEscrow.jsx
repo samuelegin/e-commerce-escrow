@@ -157,7 +157,7 @@ export default function CreateEscrow() {
   )
 
   return (
-    <div className="page">
+    <div className="page create-escrow-page">
       <div style={{ borderBottom:'var(--b2)' }}>
         <div className="wrap" style={{ paddingTop:36, paddingBottom:0 }}>
           <p style={{ fontSize:'10px', textTransform:'uppercase', letterSpacing:'0.12em', color:'#888', marginBottom:6 }}>
@@ -183,8 +183,8 @@ export default function CreateEscrow() {
         </div>
       </div>
 
-      <div className="wrap" style={{ paddingTop:40, paddingBottom:60 }}>
-        <div style={{ display:'grid', gridTemplateColumns:'1fr 340px', gap:0 }}>
+      <div className="wrap create-escrow-layout" style={{ paddingTop:40, paddingBottom:60 }}>
+        <div className="grid two-col-layout" style={{ display:'grid', gridTemplateColumns:'1fr 340px', gap:0 }}>
 
           {/* Form */}
           <div style={{ borderRight:'var(--b1)', paddingRight:40, display:'flex', flexDirection:'column', gap:22 }}>

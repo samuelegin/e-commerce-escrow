@@ -90,18 +90,9 @@ export default function Home() {
     <>
 
       {/* ── HERO ─────────────────────────────────────────── */}
-      <section style={{
-        paddingTop:'var(--nav-h)',
-        display:'grid', gridTemplateColumns:'1fr 1fr',
-        minHeight:'100vh',
-        borderBottom:'var(--b2)',
-      }}>
+      <section className="home-hero">
         {/* LEFT */}
-        <div style={{
-          borderRight:'var(--b2)',
-          padding:'72px 48px 48px',
-          display:'flex', flexDirection:'column', justifyContent:'space-between',
-        }}>
+        <div className="home-hero-left">
           <div>
             {/* eyebrow */}
             <div style={{ display:'flex', alignItems:'center', gap:10, marginBottom:28 }}>
@@ -159,7 +150,7 @@ export default function Home() {
           </div>
 
           {/* Bottom stats — live from blockchain */}
-          <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', borderTop:'var(--b1)', paddingTop:28, gap:0 }}>
+          <div className="home-stats">
             {[
               { n: count    !== null ? `${count}`        : '—', l:'Total Escrows', bg:'var(--lime)'    },
               { n: ethLocked !== null ? `${ethLocked}`   : '—', l:'ETH in Escrows', bg:'var(--purple2)' },
@@ -178,11 +169,7 @@ export default function Home() {
         </div>
 
         {/* RIGHT — geometric art canvas */}
-        <div style={{
-          background:'var(--cream)',
-          position:'relative', overflow:'hidden',
-          display:'flex', alignItems:'center', justifyContent:'center',
-        }}>
+        <div className="home-hero-right">
           {/* Dot grid bg */}
           <div style={{
             position:'absolute', inset:0,
@@ -302,7 +289,7 @@ export default function Home() {
       </section>
 
       {/* ── CTA BAR ── */}
-      <section style={{ display:'grid', gridTemplateColumns:'1fr 1fr 1fr', borderBottom:'var(--b2)' }}>
+      <section className="home-cta-grid">
         {[
           { to:'/marketplace', label:'Browse Market',  bg:'var(--cream)', icon:'→' },
           { to:'/create',      label:'Create Escrow',  bg:'var(--lime)',  icon:'↗' },

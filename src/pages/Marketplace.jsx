@@ -59,11 +59,11 @@ export default function Marketplace() {
   const hasFilters = search.trim() || category
 
   return (
-    <div className="page">
+    <div className="page marketplace-page">
 
       {/* ── Header ───────────────────────────────────────── */}
       <div style={{ borderBottom: 'var(--b2)' }}>
-        <div className="wrap" style={{ paddingTop: 36, paddingBottom: 0 }}>
+        <div className="wrap marketplace-header" style={{ paddingTop: 36, paddingBottom: 0 }}>
 
           {/* Title row */}
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: 20 }}>
@@ -81,7 +81,7 @@ export default function Marketplace() {
           </div>
 
           {/* ── Search bar ─────────────────────────────────── */}
-          <div style={{
+          <div className="marketplace-searchbar" style={{
             display: 'flex', border: 'var(--b2)',
             background: 'var(--white)', boxShadow: 'var(--s2)',
             marginBottom: 0,

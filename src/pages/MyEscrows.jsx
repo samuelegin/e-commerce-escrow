@@ -43,10 +43,10 @@ export default function MyEscrows() {
   const shown = list.filter(e => TABS[tab].filter(e, account))
 
   return (
-    <div className="page">
+    <div className="page my-escrows-page">
       {/* Header */}
       <div style={{borderBottom:'var(--b2)'}}>
-        <div className="wrap" style={{paddingTop:36,paddingBottom:0}}>
+        <div className="wrap my-escrows-header" style={{paddingTop:36,paddingBottom:0}}>
           {/* Address chip */}
           <div style={{marginBottom:10}}>
             <span style={{
@@ -67,7 +67,7 @@ export default function MyEscrows() {
           </div>
 
           {/* Stats strip */}
-          <div style={{display:'flex',gap:0,marginBottom:20}}>
+          <div className="stats-strip" style={{display:'flex',gap:0,marginBottom:20}}>
             {[
               {label:'Total',     val:list.length,                                                        bg:'var(--cream)'},
               {label:'Seller',    val:list.filter(e=>e.seller?.toLowerCase()===account.toLowerCase()).length, bg:'var(--lime)'},
@@ -87,7 +87,7 @@ export default function MyEscrows() {
           </div>
 
           {/* Tabs */}
-          <div style={{display:'flex',gap:0}}>
+          <div className="tabs-strip" style={{display:'flex',gap:0}}>
             {TABS.map((t,i)=>(
               <button key={i} onClick={()=>setTab(i)} style={{
                 padding:'9px 16px',

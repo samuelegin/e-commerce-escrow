@@ -221,12 +221,210 @@ select.input { appearance: none; cursor: pointer; }
 .nowrap { white-space: nowrap; }
 .fill  { width: 100%; }
 
+.home-hero {
+  padding-top: var(--nav-h);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+  border-bottom: var(--b2);
+}
+
+.home-hero-left {
+  border-right: var(--b2);
+  padding: 72px 48px 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.home-hero-right {
+  background: var(--cream);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: var(--b1);
+  padding-top: 28px;
+  gap: 0;
+}
+
+.home-cta-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border-bottom: var(--b2);
+}
+
+.marketplace-header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.marketplace-searchbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.marketplace-searchbar input,
+.marketplace-searchbar select,
+.marketplace-searchbar button {
+  min-width: 220px;
+}
+
+.my-escrows-header .stats-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.my-escrows-header .tabs-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
 /* ── Responsive ── */
+@media (max-width: 1024px) {
+  .wrap { padding: 0 22px; }
+
+  .create-escrow-layout .two-col-layout,
+  .escrow-detail-layout .two-col-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .create-escrow-layout .two-col-layout > div,
+  .escrow-detail-layout .two-col-layout > div {
+    border-right: none !important;
+    padding-right: 0 !important;
+  }
+
+  .marketplace-searchbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .marketplace-searchbar > div,
+  .marketplace-searchbar > select,
+  .marketplace-searchbar > .btn {
+    min-width: 100% !important;
+  }
+
+  .my-escrows-header .stats-strip,
+  .my-escrows-header .tabs-strip {
+    flex-wrap: wrap;
+  }
+
+  .my-escrows-header .stats-strip > div,
+  .my-escrows-header .tabs-strip button {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+}
+
 @media (max-width: 900px) {
   .wrap { padding: 0 20px; }
   .hide-mob { display: none !important; }
+
+  .home-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .home-hero-right {
+    display: none;
+  }
+
+  .home-hero-left {
+    border-right: none !important;
+    padding: 40px 24px 24px !important;
+  }
+
+  .home-stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .home-stats > div {
+    border-right: none !important;
+    border-bottom: var(--b1);
+    padding: 14px 8px !important;
+  }
+
+  .home-cta-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .home-cta-grid > a {
+    border-right: none !important;
+    border-bottom: var(--b1);
+  }
+
+  .create-escrow-layout .two-col-layout,
+  .escrow-detail-layout .two-col-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .create-escrow-layout .two-col-layout > div,
+  .escrow-detail-layout .two-col-layout > div {
+    padding-right: 0 !important;
+  }
+
+  .my-escrows-header .stats-strip,
+  .my-escrows-header .tabs-strip {
+    flex-wrap: wrap;
+  }
+
+  .my-escrows-header .stats-strip > div,
+  .my-escrows-header .tabs-strip button {
+    flex: 1 1 100%;
+  }
 }
+
 @media (max-width: 600px) {
   .wrap { padding: 0 14px; }
   .hide-sm { display: none !important; }
+
+  .home-hero-left {
+    padding: 30px 16px 20px !important;
+  }
+
+  .home-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .home-hero-left h1 {
+    font-size: clamp(2.2rem, 10vw, 4rem) !important;
+    line-height: 1.05 !important;
+  }
+
+  .home-hero-left p {
+    font-size: 12px !important;
+    max-width: 100% !important;
+  }
+
+  .home-cta-grid > a {
+    font-size: 1rem !important;
+    padding: 20px;
+  }
+
+  .marketplace-searchbar {
+    gap: 8px;
+  }
+
+  .marketplace-searchbar > select,
+  .marketplace-searchbar > div {
+    min-width: 100% !important;
+  }
+
+  .page .spin { width: 36px !important; height: 36px !important; }
 }
+
+

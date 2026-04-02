@@ -320,7 +320,6 @@ export default function Home() {
         <div style={{ fontSize:'11px', color:'#999', fontFamily:'var(--font-mono)' }}>
           Ethereum · Sepolia Testnet · IPFS
         </div>
-        <div style={{ fontSize:'11px', color:'#999' }}>Final Year Project · 2025</div>
       </footer>
     </>
   )

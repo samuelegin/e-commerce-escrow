@@ -184,10 +184,10 @@ export default function CreateEscrow() {
       </div>
 
       <div className="wrap create-escrow-layout" style={{ paddingTop:40, paddingBottom:60 }}>
-        <div className="grid two-col-layout" style={{ display:'grid', gridTemplateColumns:'1fr 340px', gap:0 }}>
+        <div className="grid two-col-layout" style={{ display:'grid', gap:20 }}>
 
           {/* Form */}
-          <div style={{ borderRight:'var(--b1)', paddingRight:40, display:'flex', flexDirection:'column', gap:22 }}>
+          <div style={{ paddingRight:0, display:'flex', flexDirection:'column', gap:22 }}>
 
             <div className="field">
               <label className="label">Item Image (optional · pinned to IPFS)</label>

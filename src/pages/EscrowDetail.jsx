@@ -92,10 +92,10 @@ export default function EscrowDetail() {
       </div>
 
       <div className="wrap escrow-detail-layout" style={{ paddingTop:36, paddingBottom:60 }}>
-        <div className="grid two-col-layout" style={{ display:'grid', gridTemplateColumns:'1fr 340px', gap:0 }}>
+        <div className="grid two-col-layout" style={{ display:'grid', gap:20 }}>
 
           {/* Main */}
-          <div style={{ borderRight:'var(--b1)', paddingRight:40 }}>
+          <div style={{ paddingRight:0 }}>
 
             {imgUrl && (
               <div style={{ height:300, border:'var(--b1)', boxShadow:'var(--s2)', marginBottom:32, background:`url(${imgUrl}) center/cover no-repeat` }}/>

@@ -473,7 +473,9 @@ select.input { appearance: none; cursor: pointer; }
 
   .create-escrow-layout .two-col-layout,
   .escrow-detail-layout .two-col-layout {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
+    display: grid;
+    gap: 20px;
   }
 
   .create-escrow-layout .two-col-layout > div,
